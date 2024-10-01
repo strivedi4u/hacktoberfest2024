@@ -89,6 +89,12 @@ This milestone aims to help our repository gain visibility and encourage partici
 - Monitor the number of stars weekly and adjust strategies as needed.
 - Encourage feedback from contributors on how to improve outreach efforts.
 
+## Our Top Contributors 
+
+<p align="center"><a href="https://github.com/strivedi4u/Hacktoberfest2024/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=strivedi4u/Hacktoberfest2024" max={1000} columns={100} anon={1}/>
+</a></p>
+
 ---
 
 Thank you for being a part of this project, and happy coding! 🚀
