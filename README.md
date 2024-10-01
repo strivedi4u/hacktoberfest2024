@@ -52,6 +52,6 @@ Click the **Fork** button at the top right corner of this page to create a copy 
 After forking, clone the repository to your local machine using the command:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/strivedi4u/hackoctoberfest2024.git
 
 
