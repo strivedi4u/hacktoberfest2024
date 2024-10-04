@@ -2,6 +2,12 @@
 
 ### ⭐ If you find this repository helpful, please give it a star! ⭐
 
+
+🎯 Connect with fellow contributors, get support, and have fun along the way!
+🟢 Join our WhatsApp Group Now!
+🔗 Click Here to Join!  👇👇👇👇👇👇👇
+https://chat.whatsapp.com/JP5uGuNAS0f6ShuuanPh7E
+
 This repository is part of **Hacktoberfest 2024!** 🌍  
 We’re excited to have you here and encourage developers of all skill levels, especially beginners, to participate in contributing to this open-source project. Whether it’s your first time contributing or you're an experienced developer, this project is designed to be welcoming, fun, and collaborative!
 
