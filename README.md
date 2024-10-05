@@ -7,7 +7,11 @@
 🟢 Join our WhatsApp Group Now!
 
 🔗 Click Here to Join!  👇👇👇👇👇👇👇
+
 https://chat.whatsapp.com/JP5uGuNAS0f6ShuuanPh7E
+
+![Uploading WhatsApp Image 2024-10-05 at 10.31.25 AM.jpeg…]()
+
 
 This repository is part of **Hacktoberfest 2024!** 🌍  
 We’re excited to have you here and encourage developers of all skill levels, especially beginners, to participate in contributing to this open-source project. Whether it’s your first time contributing or you're an experienced developer, this project is designed to be welcoming, fun, and collaborative!
