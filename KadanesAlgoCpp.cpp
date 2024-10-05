@@ -3,21 +3,24 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Function to find the sum of subarray with maximum sum
+// Function to find the sum of subarray with maximum sum using kadanes Algorithm
 int maxSubarraySum(vector<int> &arr) {
     int res = arr[0];
-  
-    // Outer loop for starting point of subarray
+    int currSum = 0;
+    //Here we will iterate the given array with a single loop 
       for(int i = 0; i < arr.size(); i++) {
-        int currSum = 0;
-      
-        // Inner loop for ending point of subarray
-        for(int j = i; j < arr.size(); j++) {
-            currSum = currSum + arr[j];
-          
-            // Update res if currSum is greater than res
-            res = max(res, currSum);
+       
+        currSum+=arr[i];
+        
+        if(currSum>res){
+            res=currSum;
         }
+  // If at any point the currSum becomes less than 0, we will set the currSum as 0     
+        if(currSum<0){
+            currSum=0;
+        }
+          
+           
     }
     return res;
 }
