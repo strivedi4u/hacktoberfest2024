@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern 3D Hover Effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="image-card">
+        <img src="your-image.jpg" alt="Your Profile" class="profile-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e5e7eb;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Image Container with 3D Perspective */
+.image-card {
+    width: 300px;
+    height: 400px;
+    perspective: 1500px; /* Creates a deep 3D perspective */
+    transition: transform 0.6s ease;
+}
+
+/* The Image Styling */
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Add lighting on hover */
+.image-card:hover .profile-img {
+    transform: rotateY(20deg) rotateX(10deg) scale(1.05); /* Add rotation and slight scale on hover */
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+    filter: brightness(1.1); /* Simulate lighting on hover */
+}
+
+/* Glowing border effect */
+.image-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+    z-index: -1;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+.image-card:hover::before {
+    box-shadow: 0 50px 80px rgba(0, 0, 0, 0.4); /* Increase shadow intensity on hover */
+}
+
+
+
+const imageCard = document.querySelector('.image-card');
+const image = document.querySelector('.profile-img');
+
+imageCard.addEventListener('mousemove', (e) => {
+    const width = imageCard.offsetWidth;
+    const height = imageCard.offsetHeight;
+    const mouseX = e.pageX - imageCard.offsetLeft;
+    const mouseY = e.pageY - imageCard.offsetTop;
+
+    // Calculate rotation for X and Y axis
+    const rotateY = ((mouseX / width) * 30) - 15; // Adjust for image tilt along Y axis
+    const rotateX = ((mouseY / height) * -30) + 15; // Adjust for image tilt along X axis
+
+    image.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) scale(1.1)`;
+});
+
+imageCard.addEventListener('mouseleave', () => {
+    // Reset the image when the mouse leaves
+    image.style.transform = 'rotateY(0deg) rotateX(0deg) scale(1)';
+});
