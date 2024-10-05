@@ -10,7 +10,8 @@
 
 https://chat.whatsapp.com/JP5uGuNAS0f6ShuuanPh7E
 
-![Uploading WhatsApp Image 2024-10-05 at 10.31.25 AM.jpeg…]()
+![Hacktoberfest2024](https://github.com/user-attachments/assets/e1f0f8b0-146f-4c0b-9ee0-51cc9f0c99b4)
+
 
 
 This repository is part of **Hacktoberfest 2024!** 🌍  
