@@ -26,6 +26,22 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
-   cd age-calculator
+       git clone <repository-url>
+       cd age-calculator
+
+
+2. Create a virtual environment (optional but recommended):
+
+       python -m venv venv
+       source venv/bin/activate   # On Windows use `venv\Scripts\activate`
+   
+3.Install the required packages:
+      
+      pip install Flask
+      
+4.Run the application:
+           
+      python app.py
+ 
+      
 
