@@ -3,7 +3,7 @@ import json
 import re
 import os
 import time
-
+import numpy
 # Global Data Stores
 tasks = []
 notes = {}
