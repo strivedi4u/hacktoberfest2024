@@ -2,7 +2,7 @@
 
 ### ⭐ If you find this repository helpful, please give it a star! ⭐
 
-#### Follow me on Github
+#### 🎯 Follow me on Github 🎯
 [![GitHub followers](https://img.shields.io/github/followers/strivedi4u.svg?style=social&label=Follow)](https://github.com/strivedi4u?tab=followers)
 
 🎯 Connect with fellow contributors, get support, and have fun along the way!
