@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body>
+    <h1>Blog Page</h1>
+    <div id="posts"></div>
+
+    <py-script>
+        posts = [
+            {
+                'author': 'John Doe',
+                'title': 'Blog Post 1',
+                'content': 'First post content',
+                'date_posted': 'October 7, 2024'
+            },
+            {
+                'author': 'Jane Doe',
+                'title': 'Blog Post 2',
+                'content': 'Second post content',
+                'date_posted': 'October 8, 2024'
+            }
+        ]
+
+        posts_html = ""
+        for post in posts:
+            posts_html += f"""
+            <article>
+                <h2>{post['title']}</h2>
+                <p>by {post['author']} on {post['date_posted']}</p>
+                <p>{post['content']}</p>
+            </article>
+            """
+
+        document.getElementById("posts").innerHTML = posts_html
+    </py-script>
+</body>
+</html>
