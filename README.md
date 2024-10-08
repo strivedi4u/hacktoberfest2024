@@ -1,4 +1,4 @@
-# Welcome to My Hacktoberfest2024 Repo 🎉
+# Welcome to my Hacktoberfest 2024 Repository 🎉
 
 ### ⭐ If you find this repository helpful, please give it a star! ⭐
 
@@ -8,7 +8,7 @@
 🎯 Connect with fellow contributors, get support, and have fun along the way!
 🟢 Join our WhatsApp Group Now!
 
-🔗 Click Here to Join!  👇👇👇👇👇👇👇
+🔗 Click Here to Join!  👇
 
 https://chat.whatsapp.com/JP5uGuNAS0f6ShuuanPh7E
 
@@ -19,9 +19,15 @@ https://chat.whatsapp.com/JP5uGuNAS0f6ShuuanPh7E
 This repository is part of **Hacktoberfest 2024!** 🌍  
 We’re excited to have you here and encourage developers of all skill levels, especially beginners, to participate in contributing to this open-source project. Whether it’s your first time contributing or you're an experienced developer, this project is designed to be welcoming, fun, and collaborative!
 
-## Hacktoberfest
+## Table of Contents
 
-### Repository Description
+1. [Introduction](#introduction)
+2. [About the Project](#-about-the-project)
+3. [Tech Stacks](#%EF%B8%8F-tech-stacks)
+4. [Prerequisites](#-prerequisites)
+5. [Getting Started](#-how-to-get-started-)
+
+### Introduction
 This repository contains a collection of coding challenges and projects aimed at helping developers improve their skills and contribute to open source. The challenges cover various topics, including algorithms, web development, and application building, making it a perfect starting point for anyone looking to enhance their programming abilities. 
 
 ### 🧑‍💻 About the Project
@@ -32,7 +38,7 @@ The project aims to provide a hands-on approach to learning by allowing contribu
 - **Collaborative Learning:** Engage with the community and learn from fellow developers.
 - **Open Source Contribution:** Gain experience in contributing to open-source projects.
 
-### 🛠️ Tech Stack
+### 🛠️ Tech Stacks
 This project uses the following technologies:
 
 - **Programming Languages:** JavaScript, Python, C#
@@ -103,7 +109,7 @@ This milestone aims to help our repository gain visibility and encourage partici
 - Monitor the number of stars weekly and adjust strategies as needed.
 - Encourage feedback from contributors on how to improve outreach efforts.
 
-## Our Top Contributors 
+## Top Contributors 
 
 <p align="center"><a href="https://github.com/strivedi4u/Hacktoberfest2024/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=strivedi4u/Hacktoberfest2024" max={1000} columns={100} anon={1}/>
@@ -111,4 +117,4 @@ This milestone aims to help our repository gain visibility and encourage partici
 
 ---
 
-Thank you for being a part of this project, and happy coding! 🚀
+Thank you for being a part of this project. Happy coding! 🚀
