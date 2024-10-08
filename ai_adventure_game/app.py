@@ -70,3 +70,17 @@ llm_chain = LLMChain(
     prompt=prompt,
     memory=cass_buff_memory
 )
+
+choice = "start"
+
+while True:
+    response = llm_chain.predict(human_input=choice)
+    print("\n")
+    print("guide: ", response.strip())
+    print("--------------------------------------------------------------------------------")
+    print("\n")
+
+    if "The End." in response:
+        break
+
+    choice = input("Your reply: ")
