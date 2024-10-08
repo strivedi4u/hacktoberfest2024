@@ -42,3 +42,31 @@ cass_buff_memory = ConversationBufferMemory(
     memory_key="chat_history",  # Key for storing chat history
     chat_memory=message_history  # Reference to Cassandra message history
 )
+
+template = """
+You are now the game guide of a mystical journey in the Whispering Woods. You must ask the player for his or her name and address them with that name further in the game.
+A player seeks the lost Gem of Serenity. 
+You must navigate her through challenges, choices, and consequences, 
+dynamically adapting the tale based on the traveler's decisions. The Game should go on with  plots and new characters being introduced further in the game either helping or opposing the player. 
+Your goal is to create a branching narrative experience where each choice 
+leads to a new path, ultimately determining the player's fate. 
+
+Here are some rules to follow:
+1. Start by asking the player their name and to choose some kind of weapons that will be used later in the game, keep the weapon theme medieval.
+2. Have a few paths that lead to success
+3. Have some paths that lead to death. If the user dies generate a response that explains the death and ends in the text: "The End.", I will search for this text to end the game
+Here is the chat history, use this to understand what to say next: {chat_history}
+Human: {human_input}
+AI:"""
+
+prompt = PromptTemplate(
+    input_variables=["chat_history", "human_input"],
+    template=template
+)
+
+llm = OpenAI(openai_api_key=OPENAI_API_KEY)
+llm_chain = LLMChain(
+    llm=llm,
+    prompt=prompt,
+    memory=cass_buff_memory
+)
