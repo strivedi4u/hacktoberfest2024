@@ -1,0 +1,20 @@
+.pokemonWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 50px;
+}
+
+.btns{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btns>button{
+    background-color: #d00000;
+}
+
+.btns>button:hover{
+    background-color: #8c0000;
+}

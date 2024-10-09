@@ -1,0 +1,18 @@
+.pokemon{
+    width: 300px;
+    height: 300px;
+}
+
+.pokemonImage{
+    width: 250px;
+    height: 250px;
+}
+
+.pokemon:hover{
+    background-color: #f3f3f3;
+}
+
+.pokemonName{
+    letter-spacing: 5px;
+    color: black;
+}
