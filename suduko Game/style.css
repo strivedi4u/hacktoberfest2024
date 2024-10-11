@@ -1,0 +1,50 @@
+/* style.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+.container {
+    text-align: center;
+}
+
+#sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    grid-gap: 2px;
+    margin: 20px 0;
+}
+
+#sudoku-board input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+#sudoku-board input:nth-child(3n+1) {
+    border-left: 2px solid #333;
+}
+
+#sudoku-board input:nth-child(-n+9) {
+    border-top: 2px solid #333;
+}
+
+#sudoku-board input:nth-child(3n) {
+    border-right: 2px solid #333;
+}
+
+#sudoku-board input:nth-child(n+73) {
+    border-bottom: 2px solid #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
