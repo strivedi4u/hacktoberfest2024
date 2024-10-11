@@ -1,0 +1,6 @@
+@NTLMAuthConnect_HostAddress = http://localhost:5253
+
+GET {{NTLMAuthConnect_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

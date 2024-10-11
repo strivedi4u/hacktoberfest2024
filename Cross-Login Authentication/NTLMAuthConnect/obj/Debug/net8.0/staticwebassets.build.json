@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "X1jiYiIPdhW2fMid1m2/x7+9Qv1W39r6010Q+ot5mfU=",
+  "Source": "NTLMAuthConnect",
+  "BasePath": "_content/NTLMAuthConnect",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
