@@ -1,4 +1,3 @@
-// src/components/ExpenseSummary.js
 import React from 'react';
 
 const ExpenseSummary = ({ expenses }) => {

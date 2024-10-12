@@ -1,4 +1,3 @@
-// src/components/ExpenseList.js
 import React from 'react';
 
 const ExpenseList = ({ expenses, onDeleteExpense }) => {
