@@ -1,37 +1,71 @@
-#include <bits/stdc++.h>
-using namespace std;
+/************************************************************
 
-// Definition for singly-linked list.
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
+    Following is the linked list node structure.
+    
+    template <typename T>
+    class Node {
+        public:
+        T data;
+        Node* next;
 
-class Solution {
-public:
-    // Merges two sorted linked lists
-    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-        ListNode *dummy = new ListNode(); // Placeholder node
-        ListNode *ptr = dummy; // Pointer to build merged list
-        
-        // Compare nodes from both lists
-        while (list1 && list2) {
-            if (list1->val < list2->val) {
-                ptr->next = list1; // Add smaller node
-                list1 = list1->next;
-            } else {
-                ptr->next = list2;
-                list2 = list2->next;
+        Node(T data) {
+            next = NULL;
+            this->data = data;
+        }
+
+        ~Node() {
+            if (next != NULL) {
+                delete next;
             }
-            ptr = ptr->next;
+        }
+    };
+
+************************************************************/
+
+void solve(Node<int>* first, Node<int>* second) {
+    
+    
+    Node* curr1 = first;
+    Node* next1 = curr1 -> next;
+    
+    Node* curr2 = second;
+    Node* next2 = curr2 -> next;
+    
+    while(next1 != NULL && curr2 != NULL) {
+        
+        if( (curr2 -> data >= curr1 -> data ) 
+           && ( curr2 -> data <= next1 -> data)) {
+            
+            curr1 -> next = curr2;
+            curr2 -> next = next1;
+            curr1 = curr2;
+            curr2 = next2;
+        }
+        else {
+            
         }
         
-        // Append remaining nodes
-        ptr->next = list1 ? list1 : list2;
         
-        return dummy->next; // Return merged list (skip dummy)
     }
-};
+    
+    
+}
+
+Node<int>* sortTwoLists(Node<int>* first, Node<int>* second)
+{
+    if(first == NULL)
+        return second;
+    
+    if(second == NULL)
+        return first;
+    
+    if(first -> data <= second -> data ){
+        solve(first, second);
+    }
+    else
+    {
+        solve(second, first);
+    }
+    
+    
+}
