@@ -1,13 +1,13 @@
+from collections import OrderedDict
+
 class LRUCache:
     def __init__(self, capacity: int):
         """
         Initialize the cache with a given capacity.
-        - `cache`: Dictionary to store key-value pairs.
-        - `order`: List to maintain the order of key access (most recent key will be at the end).
+        - `cache`: OrderedDict to store key-value pairs.
         """
-        self.cache = {}  # Dictionary to store cache items (key-value pairs)
-        self.capacity = capacity  # Maximum capacity of the cache
-        self.order = []  # List to keep track of the order of keys based on usage
+        self.cache = OrderedDict()
+        self.capacity = capacity
 
     def get(self, key: int) -> int:
         """
@@ -16,10 +16,9 @@ class LRUCache:
         If key is not found, return -1.
         """
         if key in self.cache:
-            # Remove the key from its current position and move it to the end (most recently used)
-            self.order.remove(key)
-            self.order.append(key)
-            return self.cache[key]  # Return the corresponding value
+            # Move the accessed key to the end (most recently used)
+            self.cache.move_to_end(key)
+            return self.cache[key]
         return -1  # Key not found in cache
 
     def put(self, key: int, value: int) -> None:
@@ -29,16 +28,12 @@ class LRUCache:
         If the cache reaches its capacity, remove the least recently used (LRU) item.
         """
         if key in self.cache:
-            # If the key is already in cache, update its position in the order
-            self.order.remove(key)
-        elif len(self.cache) == self.capacity:
-            # Cache is full, remove the least recently used item (oldest key)
-            oldest_key = self.order.pop(0)
-            del self.cache[oldest_key]
-        
-        # Add/update the cache with the new key-value pair and mark it as the most recently used
+            # Update the key's value and move it to the end
+            self.cache.move_to_end(key)
         self.cache[key] = value
-        self.order.append(key)
+        if len(self.cache) > self.capacity:
+            # Remove the least recently used item (first item)
+            self.cache.popitem(last=False)
 
 # Test Cases
 lru_cache = LRUCache(2)
