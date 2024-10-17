@@ -14,7 +14,18 @@ https://chat.whatsapp.com/JP5uGuNAS0f6ShuuanPh7E
 
 ![Hacktoberfest2024](https://github.com/user-attachments/assets/e1f0f8b0-146f-4c0b-9ee0-51cc9f0c99b4)
 
-
+## Table of Contents
+- [Hacktoberfest](#hacktoberfest)
+  - [Repository Description](#repository-description)
+  - [About the Project](#about-the-project)
+  - [Tech Stack](#tech-stack)
+  - [Prerequisites](#prerequisites)
+  - [How to Get Started](#how-to-get-started)
+  - [Follow Me](#follow-me)
+  - [Reach 200+ Stars Before October 31](#reach-200-stars-before-october-31)
+  - [Our Top Contributors](#our-top-contributors)
+  - [Featured In](#featured-in)
+  - [Forkers and Stargazers](#forkers-and-stargazers)
 
 This repository is part of **Hacktoberfest 2024!** 🌍  
 We’re excited to have you here and encourage developers of all skill levels, especially beginners, to participate in contributing to this open-source project. Whether it’s your first time contributing or you're an experienced developer, this project is designed to be welcoming, fun, and collaborative!
@@ -24,7 +35,7 @@ We’re excited to have you here and encourage developers of all skill levels, e
 ### Repository Description
 This repository contains a collection of coding challenges and projects aimed at helping developers improve their skills and contribute to open source. The challenges cover various topics, including algorithms, web development, and application building, making it a perfect starting point for anyone looking to enhance their programming abilities. 
 
-### 🧑‍💻 About the Project
+### About the Project
 The project aims to provide a hands-on approach to learning by allowing contributors to solve real-world problems through coding challenges. Each challenge is designed to be engaging and educational, helping contributors build a solid foundation in software development.
 
 #### Features:
@@ -32,7 +43,7 @@ The project aims to provide a hands-on approach to learning by allowing contribu
 - **Collaborative Learning:** Engage with the community and learn from fellow developers.
 - **Open Source Contribution:** Gain experience in contributing to open-source projects.
 
-### 🛠️ Tech Stack
+### Tech Stack
 This project uses the following technologies:
 
 - **Programming Languages:** JavaScript, Python, C#
@@ -40,14 +51,16 @@ This project uses the following technologies:
 - **Database:** None (for the current challenges)
 - **Tools:** Git, Node.js
 
-### 📚 Prerequisites
+### Prerequisites
 Before getting started, make sure you have the following tools installed on your local machine:
 
 - **Node.js**
 - **Git**
 - **IDE (e.g., Visual Studio Code)**
 
-### ⚡ How to Get Started 🚀
+[Back to Top](#table-of-contents)
+
+### How to Get Started
 Contributing to this project is easy and rewarding. Follow these steps to make your first contribution!
 
 1. **Fork the Repository** 🍴  
@@ -58,7 +71,6 @@ Contributing to this project is easy and rewarding. Follow these steps to make y
 
    ```bash
    git clone https://github.com/strivedi4u/hacktoberfest2024.git
-   ```
 
 3. **Navigate to the Project Directory**  
    ```bash
@@ -111,4 +123,8 @@ This milestone aims to help our repository gain visibility and encourage partici
 
 ---
 
+
 Thank you for being a part of this project, and happy coding! 🚀
+
+[Back to Top](#table-of-contents)
+
