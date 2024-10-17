@@ -1,4 +1,7 @@
-class Solution {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
     public List<List<String>> solveNQueens(int n) {
         List<List<String>> results = new ArrayList<>();
         if (n == 1) {
@@ -37,16 +40,14 @@ class Solution {
         }
     }
 
-    // This method determines if a queen can be placed at
-    // proposedRow, proposedCol with the current solution
+    // This method determines if a queen can be placed at proposedRow, proposedCol with the current solution
     private boolean isValidMove(int proposedRow, int proposedCol, int[] solution) {
         for (int i = 0; i < proposedRow; i++) {
             int oldRow = i;
             int oldCol = solution[i];
             int diagonalOffset = proposedRow - oldRow;
 
-            if (oldCol == proposedCol || oldCol == proposedCol - diagonalOffset
-                    || oldCol == proposedCol + diagonalOffset) {
+            if (oldCol == proposedCol || oldCol == proposedCol - diagonalOffset || oldCol == proposedCol + diagonalOffset) {
                 return false;
             }
         }
@@ -65,5 +66,17 @@ class Solution {
             returnArr.add(new String(row));
         }
         return returnArr;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        int n = 8; // You can change n to any number
+        List<List<String>> results = solution.solveNQueens(n);
+        for (List<String> result : results) {
+            for (String row : result) {
+                System.out.println(row);
+            }
+            System.out.println();
+        }
     }
 }
