@@ -1,0 +1,20 @@
+class KthLargest {
+public:
+    int n;
+    std::multiset<int> num;
+
+    KthLargest(int k, std::vector<int>& nums) {
+        n = k;
+        for(auto v : nums) {
+            num.insert(v);
+        }
+    }
+    
+    int add(int val) {
+        num.insert(val);
+
+        auto it = num.rbegin();
+        std::advance(it, n - 1);
+        return *it;
+    }
+};
