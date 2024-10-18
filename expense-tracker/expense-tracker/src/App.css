@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e3f2fd; /* Light blue background */
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.5s ease; /* Smooth transition for background color */
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease-in-out; /* Slide-in effect */
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, select, button {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border 0.3s ease, background-color 0.3s ease; /* Transition for input focus */
+}
+
+input:focus, select:focus {
+  border-color: #42a5f5; /* Change border color on focus */
+  outline: none;
+  background-color: #e1f5fe; /* Light blue background on focus */
+}
+
+button {
+  background-color: #42a5f5; /* Blue background for buttons */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s; /* Button hover effects */
+}
+
+button:hover {
+  background-color: #2196f3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  background: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for list items */
+}
+
+li:hover {
+  transform: translateY(-2px); /* Lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+li button {
+  background-color: #dc3545;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+li button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.summary {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}

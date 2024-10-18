@@ -1,0 +1,6 @@
+# Allow all bots
+User-agent: *
+Disallow:
+
+# Sitemap
+Sitemap: /sitemap.xml
