@@ -1,9 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+from urllib.parse import urljoin
 
 # URL of the news website to scrape
-url = 'https://www.bbc.com/news'  # Replace with the actual news website
+url = 'https://www.bbc.com/news'
 
 # Send a GET request to the website
 response = requests.get(url)
@@ -13,21 +14,33 @@ if response.status_code == 200:
     # Parse the HTML content of the page
     soup = BeautifulSoup(response.text, 'html.parser')
 
-    # Find all the articles on the page
-    articles = soup.find_all('article')  # Adjust the tag based on the website structure
+    # Find all articles or news blocks on the page
+    articles = soup.find_all('article')
 
     # Initialize a list to store extracted data
     extracted_data = []
 
     for article in articles:
-        # Extract the title and link from each article
-        title = article.find('h2').get_text()  # Adjust based on the website structure
-        link = article.find('a')['href']  # Adjust based on the website structure
+        # Safely extract title and link with error handling
+        title_tag = article.find('h3') or article.find('h2')  # Try both tags for flexibility
+        title = title_tag.get_text(strip=True) if title_tag else 'No title available'
+        
+        # Handle relative and absolute URLs
+        link_tag = article.find('a')
+        if link_tag:
+            link = urljoin(url, link_tag.get('href', '#'))
+        else:
+            link = 'No link available'
+
+        # Optionally extract other metadata like publication date
+        pub_time_tag = article.find('time')
+        pub_time = pub_time_tag.get('datetime') if pub_time_tag else 'No date available'
 
         # Append the extracted data to the list
         extracted_data.append({
             'title': title,
-            'link': link
+            'link': link,
+            'publication_time': pub_time
         })
 
     # Convert the list to JSON format
