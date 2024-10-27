@@ -1,0 +1,46 @@
+h3{
+  color: grey;
+}
+
+table{
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse; 
+    border: 2px solid black;
+    
+  }
+  
+  table input {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 9  em;
+  }
+
+  
+  
+  input {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 95%;
+  }
+
+  .error{
+    font-size: 0.8em;
+    color: red;
+  }
+
+  .add{
+    background-color: rgba(68, 67, 67, 0.892);
+    color: white;
+    border: none;
+  }
+
+  .generate{
+    background-color: rgba(1, 150, 75, 0.892);
+    color: white;
+    border: none;
+  }

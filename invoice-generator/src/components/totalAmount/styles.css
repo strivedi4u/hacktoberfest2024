@@ -1,0 +1,9 @@
+.total td{
+    height: 20px;
+}
+
+.totalwords td{
+    height: 65px;
+    font-weight: bold;
+    font-size: larger;
+}

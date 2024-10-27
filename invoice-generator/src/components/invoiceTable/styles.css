@@ -1,0 +1,27 @@
+.invoiceTable-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.table-custom-bordered {
+    width: 100%;
+    border-collapse: collapse; 
+    border: 2px solid black;
+}
+
+.table-custom-bordered th, .table-custom-bordered td {
+    border: 1px solid black; 
+    padding: 8px; 
+    text-align: left;
+}
+
+.table-custom-bordered thead {
+    background-color: rgb(199, 198, 198);
+}
+
+td {
+    height: 10em; 
+}
+
+
+        
