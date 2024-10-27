@@ -1,0 +1,21 @@
+td{
+    height:6em;
+}
+
+.company-name{
+    align-self: flex-end;
+    padding-right: 50px;
+}
+
+.sign input{
+    width:14em ;
+}
+
+img{
+    width: 5em;
+    height: 2em;
+}
+
+.auth{
+    padding-right: 20px;
+}
