@@ -10,22 +10,26 @@ struct ListNode {
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-        ListNode dummy(0); // Create a dummy node
-        ListNode* current = &dummy; // Pointer to build the new list
+        // If one of the lists is empty, return the other
+        if (!list1) return list2;
+        if (!list2) return list1;
 
-        while (list1 != nullptr && list2 != nullptr) {
+        ListNode dummy(0); // Create a dummy node as a starting point
+        ListNode* current = &dummy; // Pointer to build the merged list
+
+        while (list1 && list2) {
             if (list1->val <= list2->val) {
-                current->next = list1; // Attach list1 node
+                current->next = list1;
                 list1 = list1->next;
             } else {
-                current->next = list2; // Attach list2 node
+                current->next = list2;
                 list2 = list2->next;
             }
-            current = current->next; // Move current to the next position
+            current = current->next; // Move to the next node in the merged list
         }
 
-        // Attach remaining nodes
-        current->next = (list1 != nullptr) ? list1 : list2;
+        // Attach remaining nodes from either list1 or list2
+        current->next = list1 ? list1 : list2;
 
         return dummy.next; // Return the head of the merged list
     }
@@ -34,24 +38,26 @@ public:
 // Function to create a linked list from user input
 ListNode* createList() {
     int n;
-    cout << "Enter number of nodes in the list: ";
+    cout << "Enter the number of nodes in the list: ";
     cin >> n;
 
-    if (n <= 0) return nullptr; // Return null for empty lists
+    if (n <= 0) return nullptr; // Return null for an empty list
 
     ListNode* head = nullptr;
     ListNode* tail = nullptr;
+
+    cout << "Enter " << n << " values (in sorted order): ";
     for (int i = 0; i < n; ++i) {
         int value;
         cin >> value;
         ListNode* newNode = new ListNode(value);
         
         if (!head) {
-            head = newNode; 
+            head = newNode;
             tail = head;
         } else {
-            tail->next = newNode; 
-            tail = tail->next;   
+            tail->next = newNode;
+            tail = tail->next;
         }
     }
 
@@ -61,11 +67,20 @@ ListNode* createList() {
 // Function to print the linked list
 void printList(ListNode* head) {
     ListNode* current = head;
-    while (current != nullptr) {
+    while (current) {
         cout << current->val << " ";
         current = current->next;
     }
-    cout << std::endl;
+    cout << endl;
+}
+
+// Function to free memory of the linked list
+void deleteList(ListNode* head) {
+    while (head) {
+        ListNode* temp = head;
+        head = head->next;
+        delete temp;
+    }
 }
 
 int main() {
@@ -81,6 +96,9 @@ int main() {
 
     cout << "Merged sorted linked list:\n";
     printList(mergedList);
+
+    // Free memory of all lists to prevent memory leaks
+    deleteList(mergedList);
 
     return 0;
 }
