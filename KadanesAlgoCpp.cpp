@@ -1,43 +1,21 @@
-// C++ Program to find the maximum subarray sum using nested loops 
-
-#include <bits/stdc++.h>
-using namespace std;
-
-// Function to find the sum of subarray with maximum sum using kadanes Algorithm
-int maxSubarraySum(vector<int> &arr) {
-    int res = arr[0];
-    int currSum = 0;
-    //Here we will iterate the given array with a single loop 
-      for(int i = 0; i < arr.size(); i++) {
-       
-        currSum+=arr[i];
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int maxSum = INT_MIN;
+        int currentSum = 0;
         
-        if(currSum>res){
-            res=currSum;
+        for (int i = 0; i < nums.size(); i++) {
+            currentSum += nums[i];
+            
+            if (currentSum > maxSum) {
+                maxSum = currentSum;
+            }
+            
+            if (currentSum < 0) {
+                currentSum = 0;
+            }
         }
-  // If at any point the currSum becomes less than 0, we will set the currSum as 0     
-        if(currSum<0){
-            currSum=0;
-        }
-          
-           
+        
+        return maxSum;
     }
-    return res;
-}
-
-int main() {
-    int n;
-    cout<<"Enter size of array: ";
-    cin>>n;
-    cout<<"Enter Array: ";
-    vector<int> arr;
-    int t;
-    for(int i=0; i<n; i++)
-    {
-        cin>>t;
-        arr.push_back(t);
-    }
-    cout<<endl;
-    cout <<"Maximum Subarray sum = "<< maxSubarraySum(arr)<<endl;
-    return 0;
-}
+};
